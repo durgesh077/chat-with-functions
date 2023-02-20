@@ -18,6 +18,7 @@ def index():
 
 @app.route("/ask", methods=["POST"])
 def api():
+    print("hello")
     print(request.json['prompt'])
     prompt = """
     convert the following text command as a javascript language's arrow function with proper indentation without comments without  test cases and without explanation
@@ -69,4 +70,4 @@ def api():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
